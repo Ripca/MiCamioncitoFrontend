@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="General.master.cs" Inherits="MiCamioncitoFrontend.General" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MiCamioncito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Resources/css/AdminLTE.css" rel="stylesheet" />
+<%--    <link href="Resources/css/EstilosGenerales.css" rel="stylesheet" />--%>
+
+
+    <%--PROBAR LA VERSION LOCAL--%>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="skin-blue">
+    <header class="header">
+        <a href="PaginaInicio.aspx" class="logo">Mi Camioncito
+        </a>
+
+        <nav class="navbar navbar-static-top" >
+        </nav>
+
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <aside class="left-side sidebar-offcanvas">
+            <section class="sidebar">
+                
+                <ul class="sidebar-menu">
+                     <li>
+                        <a href="VerClientes.aspx">
+                            <span>VER CLIENTES</span>
+                        </a>    
+                    </li>
+                    <li>
+                        <a href="AgregarClientes.aspx">
+                            <span>AGREGAR CLIENTES</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ModificarClientes.aspx">
+                            <span>MODIFICAR CLIENTES</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="EliminarClientes.aspx">
+                            <span>ELIMINAR CLIENTES</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="VerVehiculos.aspx">
+                            <span>VER VEHICULOS</span>
+                        </a>    
+                    </li>
+                    <li>
+                        <a href="AgregarVehiculos.aspx">
+                            <span>AGREGAR VEHICULOS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="AgregarSolicitudes.aspx">
+                            <span>AGREGAR SOLICITUDES</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="VerSolicitudes.aspx">
+                              <span>VER SOLICITUDES</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ModificarSolicitudes.aspx">
+                            
+                            <span>ACTUALIZAR SOLICITUDES</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </section>
+        </aside>
+    </div>
+    <aside class="right-side">
+        <section class="content-header">
+            <h1>
+                <asp:Label ID="lblOpcion" runat="server" Text="Servicio, Calidad, Precio...">
+                </asp:Label>
+            </h1>
+        </section>
+        <section class="content">
+            <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <%--Carga el diseño heredado--%>
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </section>
+    </aside>
+
+   
+</body>
+</html>
